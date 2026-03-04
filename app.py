@@ -61,7 +61,7 @@ def load_assets():
 model, scaler, class_names, model_loaded = load_assets()
 
 # 3. UI LAYOUT
-st.title("🛡️ Burnout Risk Intelligence")
+st.title("🛡️ Burnout Risk Predictor")
 tab1, tab2, tab3 = st.tabs(["🎯 Risk Assessment", "📂 Dataset Analysis", "📜 Prediction Logs"])
 
 with tab1:
@@ -205,8 +205,4 @@ with tab3:
 
         st.dataframe(styled_df, use_container_width=True)
 
-# 5. SIDEBAR
-with st.sidebar:
-    st.title("⚙️ System Status")
-    st.markdown("---")
-    st.write("✅ Model Engine: Online") if model_loaded else st.write("❌ Model Engine: Offline")
+
